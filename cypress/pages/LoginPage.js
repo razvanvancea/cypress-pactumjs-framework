@@ -7,7 +7,7 @@ class LoginPage {
 		return cy.get('#password');
 	}
 
-	getSubmitBtn() {
+	getSubmitLoginBtn() {
 		return cy.get('#submitLoginBtn');
 	}
 

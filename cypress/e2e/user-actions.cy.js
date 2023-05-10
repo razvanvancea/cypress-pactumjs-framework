@@ -5,18 +5,14 @@ import LeftSideMenuPage from '../pages/LeftSideMenuPage';
 import RegisterPage from '../pages/RegisterPage';
 
 describe('User actions Test Suite', () => {
-	beforeEach(() => {
-		cy.visit('https://qa-practice.netlify.app');
-	});
-
 	it('user should be able to login - test', () => {
 		LeftSideMenuPage.getFormsItem().click();
 		LeftSideMenuPage.getLoginLink().click();
 
 		LoginPage.getEmailField().type('admin@admin.com');
 		LoginPage.getPasswordField().type('admin123');
-		LoginPage.getSubmitBtn().click();
-		
+		LoginPage.getSubmitLoginBtn().click();
+
 		LoginPage.getResponseMessage().should(
 			'have.text',
 			'admin@admin.com, you have successfully logged in!'
@@ -27,11 +23,10 @@ describe('User actions Test Suite', () => {
 		LeftSideMenuPage.getFormsItem().click();
 		LeftSideMenuPage.getLoginLink().click();
 
-		LoginPage.getEmailField().type('admin@admin.com');
-		LoginPage.getPasswordField().type('wrongpsw');
-		LoginPage.getSubmitBtn().click();
+		cy.login('admin@admin.com', 'wrongPassword');
 
-		cy.get('div.alert')
+		cy
+			.get('div.alert')
 			.should(
 				'have.text',
 				"Bad credentials! Please try again! Make sure that you've registered."
@@ -49,7 +44,7 @@ describe('User actions Test Suite', () => {
 		RegisterPage.getPasswordField().type('supersecret');
 		RegisterPage.getTermsAndConsCheckbox().click();
 		RegisterPage.getSubmitRegisterBtn().click();
-		
+
 		RegisterPage.getResponseMessage().should(
 			'have.text',
 			'The account has been successfully created!'
