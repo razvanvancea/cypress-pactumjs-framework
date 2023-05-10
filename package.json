@@ -1,0 +1,17 @@
+{
+  "name": "cypress-pactumjs-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Razvan Vancea",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.12.0",
+    "mocha": "^10.2.0",
+    "npx": "^10.2.2",
+    "pactum": "^3.4.0"
+  }
+}
