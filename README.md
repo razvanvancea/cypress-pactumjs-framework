@@ -1,27 +1,44 @@
-Very simple framework skeleton that uses Cypress for Web tests and PactumJS for API tests.
+## Simple framework skeleton that uses **Cypress** for Web tests and **PactumJS** for API tests.
 
-Prerequisites:
-NodeJS installed on local machine
-Chrome browser
+## Prerequisites
 
-Setup (one time action):
+NodeJS [SETUP Tutorial](https://youtu.be/j8HZpFjPPVU)
 
-Open up the CLI and run 'npm install'
+Git [SETUP Tutorial](https://www.youtube.com/watch?v=0XJMg1ZMSEo)
 
-How to run?
+Visual Studio Code [Download here](https://code.visualstudio.com/download)
+
+Chrome Browser [Download here](https://www.google.com/chrome)   
+
+
+
+## Setup (one time action)
+
+Open up the CLI and run
+
+```sh
+npm install
+```
+
+## How to run the tests?
 Open up the CLI and run the following
 
 For api tests
+```sh
 npm run test-api
+```
 
 For web tests
+```sh
 npm run test-web
+```
 
 
-== Test results ==
-both web and API tests shows by default the results in CLI
 
-API tests report will be generated as HTML file in the results/mochawesome.html file (feel free to open it in browser)
+## Test results
+both web and API tests shows by default the real-time results in CLI
+
+API tests report will also be generated as HTML file in the results/mochawesome.html file (feel free to open it in browser)
 
 WEB tests can be configured with multiple reporters (including HTML as well)
 
