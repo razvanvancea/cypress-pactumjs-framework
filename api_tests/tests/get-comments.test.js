@@ -8,7 +8,7 @@ describe('GET all comments endpoint Test suite', () => {
 		request.setDefaultTimeout(10000);
 	});
 
-	it('GET all comments test', async () => {
+	it('GET all comments endpoint test', async () => {
 		await spec()
 			.get(BASE_URL + '/comments')
 			.expectStatus(200)

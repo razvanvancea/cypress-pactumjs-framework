@@ -7,7 +7,7 @@ describe('POST posts endpoint - Test suite', () => {
 		request.setDefaultTimeout(10000);
 	});
 
-	it('Create new post', async () => {
+	it('Create new post test', async () => {
 		const REQUEST_BODY = {
 			title: 'foo',
 			body: 'lorem ipsum dolor sit amet',
