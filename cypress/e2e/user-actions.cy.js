@@ -6,7 +6,7 @@ import RegisterPage from '../pages/RegisterPage';
 
 describe('User actions Test Suite', () => {
 	it('user should be able to login - test', () => {
-		LeftSideMenuPage.getFormsItem().click();
+		LeftSideMenuPage.getFormsMenu().click();
 		LeftSideMenuPage.getLoginLink().click();
 
 		LoginPage.getEmailField().type('admin@admin.com');
@@ -20,7 +20,7 @@ describe('User actions Test Suite', () => {
 	});
 
 	it('user should not be able to login using wrong password', () => {
-		LeftSideMenuPage.getFormsItem().click();
+		LeftSideMenuPage.getFormsMenu().click();
 		LeftSideMenuPage.getLoginLink().click();
 
 		cy.login('admin@admin.com', 'wrongPassword');
@@ -32,7 +32,7 @@ describe('User actions Test Suite', () => {
 	});
 
 	it('user should be able to register', () => {
-		LeftSideMenuPage.getFormsItem().click();
+		LeftSideMenuPage.getFormsMenu().click();
 		LeftSideMenuPage.getRegisterLink().click();
 
 		RegisterPage.getFirstNameField().type('John');

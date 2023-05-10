@@ -1,5 +1,5 @@
 class LeftSideMenuPage {
-	getFormsItem() {
+	getFormsMenu() {
 		return cy.get('#forms');
 	}
 
