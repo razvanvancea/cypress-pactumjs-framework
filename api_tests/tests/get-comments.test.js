@@ -12,6 +12,7 @@ describe('GET all comments endpoint Test suite', () => {
 		await spec()
 			.get(BASE_URL + '/comments')
 			.expectStatus(200)
+            .expectBodyContains('id labore ex et quam laborum')
 			.expectJsonSchema(getCommentResponseSchema);
 	});
 });
