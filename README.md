@@ -42,4 +42,4 @@ API tests report will also be generated as HTML file in the results/mochawesome.
 
 WEB tests can be configured with multiple reporters (including HTML as well)
 
-There are lots of NPM packages that we import into the project (e.g. faker for random data generation, dotenv for dynamic URLs) + design patterns like page object model and many more.
+There are lots of other NPM packages that we can import into the project (e.g. faker for random data generation, dotenv for dynamic URLs) + design patterns like page object model and many more.
