@@ -25,12 +25,10 @@ describe('User actions Test Suite', () => {
 
 		cy.login('admin@admin.com', 'wrongPassword');
 
-		cy
-			.get('div.alert')
-			.should(
-				'have.text',
-				"Bad credentials! Please try again! Make sure that you've registered."
-			);
+		LoginPage.getResponseMessage().should(
+			'have.text',
+			"Bad credentials! Please try again! Make sure that you've registered."
+		);
 	});
 
 	it('user should be able to register', () => {
