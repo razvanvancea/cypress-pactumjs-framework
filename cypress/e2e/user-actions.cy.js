@@ -40,8 +40,8 @@ describe('User authentication Test Suite', () => {
 		cy.get('#firstName').type('John');
 		cy.get('#lastName').type('Wick');
 		cy.get('#phone').type('+40720333233');
-		cy.get('#email').type('admin@admin.com');
-		cy.get('#password').type('admin123');
+		cy.get('#emailAddress').type('marco.sparrow@gmail.com');
+		cy.get('#password').type('supersecret');
 		cy.get('input[type="checkbox"]').click();
 
 		const expectedSuccessMessage = 'The account has been successfully created!';

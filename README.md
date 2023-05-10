@@ -8,9 +8,7 @@ Git [SETUP Tutorial](https://www.youtube.com/watch?v=0XJMg1ZMSEo)
 
 Visual Studio Code [Download here](https://code.visualstudio.com/download)
 
-Chrome Browser [Download here](https://www.google.com/chrome)   
-
-
+Chrome Browser [Download here](https://www.google.com/chrome)
 
 ## Setup (one time action)
 
@@ -21,21 +19,23 @@ npm install
 ```
 
 ## How to run the tests?
+
 Open up the CLI and run the following
 
 For api tests
+
 ```sh
 npm run test-api
 ```
 
 For web tests
+
 ```sh
 npm run test-web
 ```
 
-
-
 ## Test results
+
 both web and API tests shows by default the real-time results in CLI
 
 API tests report will also be generated as HTML file in the results/mochawesome.html file (feel free to open it in browser)
