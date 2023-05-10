@@ -16,6 +16,7 @@ describe('User actions Test Suite', () => {
 		LoginPage.getEmailField().type('admin@admin.com');
 		LoginPage.getPasswordField().type('admin123');
 		LoginPage.getSubmitBtn().click();
+		
 		LoginPage.getResponseMessage().should(
 			'have.text',
 			'admin@admin.com, you have successfully logged in!'
@@ -30,9 +31,7 @@ describe('User actions Test Suite', () => {
 		LoginPage.getPasswordField().type('wrongpsw');
 		LoginPage.getSubmitBtn().click();
 
-		LoginPage.getSubmitBtn().click();
-		cy
-			.get('div.alert')
+		cy.get('div.alert')
 			.should(
 				'have.text',
 				"Bad credentials! Please try again! Make sure that you've registered."
@@ -49,8 +48,8 @@ describe('User actions Test Suite', () => {
 		RegisterPage.getEmailField().type('marco.sparrow@gmail.com');
 		RegisterPage.getPasswordField().type('supersecret');
 		RegisterPage.getTermsAndConsCheckbox().click();
-
 		RegisterPage.getSubmitRegisterBtn().click();
+		
 		RegisterPage.getResponseMessage().should(
 			'have.text',
 			'The account has been successfully created!'
